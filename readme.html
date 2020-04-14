@@ -384,10 +384,11 @@ $(document).ready(function () {
 <div id="TOC">
 <ul>
 <li><a href="#intention">Intention</a></li>
-<li><a href="#preparation">Preparation</a></li>
+<li><a href="#preparation">Preparation</a><ul>
 <li><a href="#getting-the-data">Getting the data</a></li>
 <li><a href="#data-cleansing">Data cleansing</a></li>
 <li><a href="#processing-the-texts">Processing the texts</a></li>
+</ul></li>
 <li><a href="#analysis">Analysis</a><ul>
 <li><a href="#estimating-the-optimal-number-of-topics">Estimating the optimal number of topics</a><ul>
 <li><a href="#topic-modelling">Topic modelling</a></li>
@@ -401,8 +402,8 @@ $(document).ready(function () {
 </ul>
 </div>
 
-<div id="intention" class="section level3">
-<h3>Intention</h3>
+<div id="intention" class="section level1">
+<h1>Intention</h1>
 <p>This is a small explorative analysis of some publicly available Airbnb datasources hosted on <a href="http://insideairbnb.com/get-the-data.html" class="uri">http://insideairbnb.com/get-the-data.html</a>, mainly focusing on using the <em>tm</em>, <em>ldatuning</em> and <em>topicmodelling</em> NLP packages.</p>
 <pre class="r"><code>library(data.table)
 library(textcat)
@@ -411,9 +412,8 @@ library(Rmpfr)
 library(ldatuning)
 library(topicmodels)</code></pre>
 </div>
-<div id="preparation" class="section level3">
-<h3>Preparation</h3>
-</div>
+<div id="preparation" class="section level1">
+<h1>Preparation</h1>
 <div id="getting-the-data" class="section level2">
 <h2>Getting the data</h2>
 <p>The detailed reviews and listings csv-s are downloaded from the website directly. However, since they are zipped first they have to be unzipped, then read with <em>data.table</em> which is way quicker than the built in read.table on files like these.</p>
@@ -512,6 +512,7 @@ freq = colSums(as.matrix(review_dtm))</code></pre>
 <p>Total number of terms</p>
 <pre class="r"><code>length(freq)</code></pre>
 <pre><code>## [1] 1782</code></pre>
+</div>
 </div>
 <div id="analysis" class="section level1">
 <h1>Analysis</h1>

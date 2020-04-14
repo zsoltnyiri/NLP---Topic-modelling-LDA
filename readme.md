@@ -11,7 +11,7 @@ output:
 
 
 
-### Intention
+# Intention
 
 This is a small explorative analysis of some publicly available Airbnb datasources hosted on http://insideairbnb.com/get-the-data.html, mainly focusing on using the *tm*, *ldatuning* and *topicmodelling* NLP packages.
 
@@ -26,7 +26,7 @@ library(ldatuning)
 library(topicmodels)
 ```
 
-### Preparation
+# Preparation
 
 ## Getting the data
 
